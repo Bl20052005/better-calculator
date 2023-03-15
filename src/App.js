@@ -186,9 +186,9 @@ function App() {
 
     return(
         <div id="calc-container">
-            <div id="display">
+            <div id="main-screen">
                 <div id="equation">{fullVal}</div>
-                <div id="main-screen">{curVal}</div>
+                <div id="display">{curVal}</div>
             </div>
             <div id="buttons">
                 <button id="clear" onClick={() => {

@@ -21,7 +21,7 @@ body {
     width: 300px;
 }
 
-#main-screen {
+#display {
     font-family: 'DS-Digital', sans-serif;
     display: flex;
     flex-direction: column;
