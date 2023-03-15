@@ -1,0 +1,126 @@
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+body {
+    background-color: #163444;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#calc-container {
+    border: 10px solid #031324;
+    height: auto;
+    width: 300px;
+}
+
+#main-screen {
+    font-family: 'DS-Digital', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    justify-content: space-evenly;
+    text-align: right;
+    height: auto;
+    min-height: 35px;
+    padding: 5px 0;
+    width: 300px;
+    font-size: 30px;
+    background-color: #031324;
+    color: white;
+    border-bottom: 1px solid black;
+}
+
+#equation {
+    font-family: 'DS-Digital', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    justify-content: space-evenly;
+    width: 300px;
+    height: auto;
+    min-height: 25px;
+    font-size: 20px;
+    background-color: #031324;
+    color: rgb(221, 172, 10);
+    border-bottom: 2px solid #05284d;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#clear {
+    grid-column: 1 / 3;
+}
+
+#equals {
+    grid-column: 3 / 5;
+}
+
+button:not(#clear, #equals) {
+    width: 75px;
+    height: 70px;  
+}
+
+button {
+    border: 1px solid black;
+    background-color: #796e6e;
+    transition-duration: 0.5s;
+    font-size: 25px;
+    color: white;
+}
+
+#clear {
+    background-color: #ce2929;
+    transition-duration: 0.5s;
+}
+
+#clear:hover {
+    background-color: #810707;
+    transition-duration: 0.5s;
+}
+
+#delete {
+    background-color: #f35050;
+    transition-duration: 0.5s;
+}
+
+#delete:hover {
+    background-color: #9b0909;
+    transition-duration: 0.5s;
+}
+
+#add, #subtract, #multiply, #divide {
+    background-color: #554d4d;
+    transition-duration: 0.5s;
+}
+
+#add:hover, #subtract:hover, #multiply:hover, #divide:hover {
+    background-color: #3b3a3a;
+    transition-duration: 0.5s;
+}
+
+#equals {
+    background-color: #2a7be6;
+    transition-duration: 0.5s;
+}
+
+#equals:hover {
+    background-color: #2a2de6;
+    transition-duration: 0.5s;
+}
+
+button:hover {
+    transition-duration: 0.5s;
+    background-color:#3b3a3a;
+}
