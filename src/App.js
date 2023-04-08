@@ -87,6 +87,7 @@ function App() {
 
     const handleSetFullVal = (prop) => {
         if(fullVal == "0") {
+            if(/[+/*-]/.test(prop)) setfullVal(fullVal + prop);
             if(prop == "0") {
                 setfullVal("0");
             } else if(/[0-9]/.test(prop)) {
@@ -97,7 +98,7 @@ function App() {
                 setfullVal(fullVal.substring(0, fullVal.length - 1));
             }
         } else if(fullVal[fullVal.length-1] == "0") {
-            if(/[-+/*]/.test(fullVal[fullVal.length-2]) && prop != ".") setfullVal(fullVal.substring(0, fullVal.length-1) + prop);
+            if(/[-+/*]/.test(fullVal[fullVal.length-2]) && !/[+/*-]/.test(prop) && prop != ".") setfullVal(fullVal.substring(0, fullVal.length-1) + prop);
             else setfullVal(fullVal + prop);
         } else if(/[+/*]/.test(prop)) {
             if(fullVal == '') setfullVal('');
